@@ -10,6 +10,7 @@ import enum
 import json
 from json import JSONEncoder
 from flask import render_template
+from flask import request
 
 
 app = Flask(__name__)
@@ -37,17 +38,15 @@ class Action(object):
 
 # ------ UTILITY FUNCTIONS
 
-def getSearchResults(args):
-    formattedSearchTerm = parse.urlencode({'term': args.term})
+def getSearchResults(term, pages):
 
-    pages = int(args.pages if args.pages != None else 1)
+    pages = int(pages)
 
     r = requests.get(
-        'https://www.borsaitaliana.it/borsa/searchengine/search.html?lang=it&q={}'.format(args.term)     
+        'https://www.borsaitaliana.it/borsa/searchengine/search.html?lang=it&q={}'.format(term)     
         )
 
     soup = BeautifulSoup(r.text, 'html.parser')
-
 
     resultsRow = soup.find_all('tr', {"class": None})
 
@@ -56,6 +55,8 @@ def getSearchResults(args):
     count = 1
 
     for resultRow in resultsRow:
+
+        
 
         if count > pages:
             break
@@ -128,25 +129,21 @@ def mainAlgorithm(action):
 
 actions = []
 
-class SteamSearch(Resource):
-    def get(self):
-        global actions
-        parser = reqparse.RequestParser()
-        parser.add_argument('term', required=True,
-                            help='A search term needs to be provided')
-        parser.add_argument('pages', required=False)
+@app.route("/borsa")
+def mainSearch():
+    global actions
 
-        actions = getStatisticsFromResults(getSearchResults(parser.parse_args()))
-        
-        return "... se boom"
+    term = request.args.get('term', type = str)
+    pages = request.args.get('pages', default = 1, type = int)
+
+    actions = getStatisticsFromResults(getSearchResults(term, pages))
+    
+    return render_template("table.html", actions = actions)
 
 @app.route("/")
 def index():
     print(actions)
-    return render_template("index.html", data = actions)
-
-
-api.add_resource(SteamSearch, '/borsa')
+    return render_template("index.html")
 
 if __name__ == '__main__':
     app.run(debug=True)

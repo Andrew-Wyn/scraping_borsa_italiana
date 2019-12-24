@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Table V01</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="/static/image/png" href="/static/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/static/css/table_util.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/table_main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100">
+					<table>
+						<thead>
+							<tr class="table100-head">
+								<th class="column1">Titolo</th>
+								<th class="column2">Apertura</th>
+								<th class="column3">Max Oggi</th>
+								<th class="column4">Min Oggi</th>
+								<th class="column5">Max Anno</th>
+								<th class="column6">Min Anno</th>
+								<th class="column7">Status</th>
+							</tr>
+						</thead>
+						<tbody>
+								{% for action in actions %}
+								
+									<tr>
+										<td class="column1">{{action.title}}</td>
+										<td class="column2">{{action.aperture}}</td>
+										<td class="column3">{{action.max_oggi}}</td>
+										<td class="column4">{{action.min_oggi}}</td>
+										<td class="column5">{{action.max_anno}}</td>
+										<td class="column6">{{action.min_anno}}</td>
+										<td class="column7">{{action.status}}</td>
+									</tr>
+
+								{% endfor %}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	
+
+<!--===============================================================================================-->	
+	<script src="/static/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/static/vendor/bootstrap/js/popper.js"></script>
+	<script src="/static/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/static/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/static/js/table_main.js"></script>
+
+</body>
+</html>
