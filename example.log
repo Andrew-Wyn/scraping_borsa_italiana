@@ -1,0 +1,3 @@
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 275-438-778
+INFO:werkzeug: * Detected change in '/home/terraformer/Scrivania/realtime_scraping/main2.py', reloading
