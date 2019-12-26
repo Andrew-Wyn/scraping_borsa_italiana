@@ -1,0 +1,48 @@
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 123-941-465
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 245-561-043
+INFO:werkzeug: * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 245-561-043
+INFO:werkzeug:172.27.0.1 - - [26/Dec/2019 11:49:15] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.27.0.1 - - [26/Dec/2019 11:49:15] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:172.27.0.1 - - [26/Dec/2019 11:49:15] "GET /static/js/main.js HTTP/1.1" 200 -
+INFO:werkzeug:172.27.0.1 - - [26/Dec/2019 11:49:15] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:werkzeug: * Detected change in '/usr/me/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 245-561-043
+INFO:werkzeug: * Detected change in '/usr/me/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 245-561-043
+INFO:werkzeug: * Detected change in '/usr/me/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 245-561-043
+INFO:werkzeug: * Detected change in '/usr/me/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 245-561-043
+INFO:werkzeug: * Detected change in '/usr/me/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 245-561-043
+INFO:werkzeug: * Detected change in '/usr/me/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 245-561-043
+INFO:werkzeug: * Detected change in '/usr/me/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 245-561-043
+INFO:werkzeug: * Detected change in '/usr/me/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 245-561-043

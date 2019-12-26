@@ -2,19 +2,15 @@ import requests
 from bs4 import BeautifulSoup
 from urllib import parse
 from flask import Flask
-from flask_restful import Resource, Api, reqparse
 import logging
 from datetime import datetime
 import re
 import enum
-import json
-from json import JSONEncoder
 from flask import render_template
 from flask import request
 
 
 app = Flask(__name__)
-api = Api(app)
 
 logging.basicConfig( level=logging.DEBUG, filename='borsa.log')
 
@@ -55,8 +51,6 @@ def getSearchResults(term, pages):
     count = 1
 
     for resultRow in resultsRow:
-
-        
 
         if count > pages:
             break
@@ -146,4 +140,4 @@ def index():
     return render_template("index.html")
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', debug=True)

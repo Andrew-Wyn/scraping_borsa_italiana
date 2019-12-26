@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  app:
+    build: .
+    entrypoint: sh -c 'while sleep 3600; do :; done'
+    working_dir: /usr/me/
+    volumes:
+      - "../source/:/usr/me"
+    ports:
+     - "5000:5000"
