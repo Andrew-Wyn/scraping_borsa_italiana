@@ -92,7 +92,10 @@ def getStatisticsFromResults(results):
 
     return statistics
 
+# capire se renderlo un metodo di Action
+
 def mainAlgorithm(action):
+    
     annualMean = (action.min_anno + action.max_anno)/2
 
     percent = annualMean/10
