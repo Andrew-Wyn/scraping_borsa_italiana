@@ -7,3 +7,8 @@
          alt="Python3">
   </a>
 </p>
+
+<h2><b>Scraping Borsa Italiana</b></h2>
+
+<i >semplice script per la facile consultazione di azioni e applicazione realtime di un algoritmo per la previsione sulla consigliata compravendita di azioni sul mercato italiano
+</i>
